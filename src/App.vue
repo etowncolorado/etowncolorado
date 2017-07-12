@@ -1,10 +1,12 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.jpg">
-    <h1>
+    <h1 id="logo">
+      <img src="./assets/logo.svg">
+    </h1>
+    <h2>
       We have a new website!<br>
       Stay tuned...
-    </h1>
+    </h2>
   </div>
 </template>
 
@@ -21,8 +23,7 @@ html {
   text-transform: uppercase;
 }
 
-
-h1 {
+h2 {
   font-family: Helvetica, Arial, sans-serif;
   color: #E6E6E6;
   font-size: 22px;
@@ -37,5 +38,19 @@ h1 {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+#logo {
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px;
+  background: #666;
+  line-height: 0;
+}
+
+#logo img {
+  width: 155px;
+  padding: 10px 20px;
+  border: solid white 2px;
 }
 </style>
