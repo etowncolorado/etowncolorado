@@ -7,12 +7,54 @@
       We have a new website!<br>
       Stay tuned...
     </h2>
+    <div v-if="sections.length">
+      <component
+        v-for="section in sections"
+        v-bind="section"
+        :is="section.contentType"
+        :key="section.id"
+      />
+    </div>
   </div>
 </template>
 
 <script>
+import Navigation from './components/Navigation'
+import RichText from './components/RichText'
+import Contentful from './store/contentful'
+
 export default {
-  name: 'app'
+  name: 'app',
+
+  components: {
+    Navigation,
+    RichText
+  },
+
+  data () {
+    return {
+      sections: [],
+      test: {
+        left: '100'
+      }
+    }
+  },
+
+  created () {
+    Contentful.from('page')
+      .where('album')
+      .first()
+      .then(page => {
+        this.sections = page.sections.map(section => Contentful.find(section))
+      })
+  },
+
+  methods: {
+    sectionComponent (section) {
+      console.log(section)
+      return section.contentType
+    }
+  }
 }
 </script>
 

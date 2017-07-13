@@ -57,7 +57,7 @@ export default class Query {
   }
 
   get (...fields) {
-    this.fields = this.fields || flattenDeep(fields)
+    this.fields = flattenDeep(fields)
     this.query.select = 'sys.id,sys.contentType,sys.createdAt,sys.updatedAt'
     this.query.include = 10
 

@@ -20,6 +20,10 @@ export default class Database {
       updatedAt: moment(entry.sys.updatedAt)
     }
 
+    model.contentType = (entry.sys.contentType)
+      ? entry.sys.contentType.sys.id
+      : 'asset'
+
     each(entry.fields, (field, key) => {
       if (isArray(field)) {
         this.hasMany(model, key, field)
@@ -35,13 +39,13 @@ export default class Database {
 
   hasMany (model, key, relation) {
     Object.defineProperty(model, key, {
-      get: () => relation.map(entry => this.items[entry.sys.id])
+      get: () => relation.map(entry => entry.sys.id)
     })
   }
 
   hasOne (model, key, relation) {
     Object.defineProperty(model, key, {
-      get: () => this.items[relation.sys.id]
+      get: () => relation.sys.id
     })
   }
 
