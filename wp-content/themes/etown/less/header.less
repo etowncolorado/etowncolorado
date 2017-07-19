@@ -1,0 +1,50 @@
+#header {
+	height: 160px;
+}
+#logo {
+	float: left;
+	display:inline-block;
+	text-indent: -9999px;
+	margin-top: 15px;
+	width: 217px;
+	height: 110px;
+	background-image: url(images/logo.jpg);
+}
+#blog-description {
+	display: none;
+}
+.skip-link {
+    position:absolute;
+    left:-9999px;
+}
+.menu-primary-container {
+	float: right;
+	margin-top: 47px;
+}
+
+#menu-primary {
+    list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	li {
+    	float:left;
+	}
+	.current_page_item a {
+		color: @dark-red;
+		border-color: @dark-red;
+	}
+	a {
+		display: block;
+    	padding: 5px 19px;
+    	text-decoration: none;
+    	border-bottom: 3px solid;
+    	border-color: #666666;
+    	color: #E6E6E6;
+    	font-size: 16px;
+    	&:hover {
+			color: @dark-red;
+			border-color: @dark-red;
+		}
+	}
+}

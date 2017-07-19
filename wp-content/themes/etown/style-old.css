@@ -1,0 +1,140 @@
+/*
+Theme Name: e|town
+Theme URI: http://www.wilsonlewisdesign.com
+Description: A search engine optimized website framework for WordPress.
+Author: Wilson Lewis
+Author URI: http://www.wilsonlewisdesign.com
+Version: 1.0
+Tags: silly, simple, shapes
+.
+Your theme can be your copyrighted work.
+Like WordPress, this work is released under GNU General Public License, version 2 (GPL).
+ 
+http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ 
+.
+*/
+
+@import url('styles/reset.css');
+@import url('styles/rebuild.css');
+@import url('styles/wp.css');
+@import url('styles/2c-r.css');
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #1A1A1A;
+	font-family: 'Old Standard TT', serif;
+}
+#wrapper {
+  margin: 0 auto;
+  padding: 0;
+  width: 940px;
+  //background-image: url(images/layout.png);
+  background-repeat: no-repeat;
+}
+/*#header {
+	height: 150px;
+}
+#logo {
+	float: left;
+	display:inline-block;
+	text-indent: -9999px;
+	margin-top: 15px;
+	width: 217px;
+	height: 110px;
+	background-image: url(images/logo.jpg);
+}
+#blog-description {
+	display: none;
+}
+.skip-link {
+    position:absolute;
+    left:-9999px;
+}
+.menu-primary-container {
+	float: right;
+	margin-top: 47px;
+}
+#menu-primary {
+    list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+#menu-primary li {
+    float:left;
+}
+#menu-primary .current_page_item a {
+	color: #C1272D;
+	border-color: #C1272D;
+}
+#menu-primary a {
+    display: block;
+    padding: 5px 19px;
+    text-decoration: none;
+    border-bottom: 3px solid;
+    border-color: #666666;
+    color: #E6E6E6;
+    font-size: 16px;
+}
+#menu-primary a:hover {
+	color: #C1272D;
+	border-color: #C1272D;
+}
+*/#quote {
+	width: 100%;
+}
+
+/*.menu-secondary-container {
+	border-top: 2px solid;
+	border-color: #4D4D4D;
+}
+#footer ul {
+	width: 860px;
+    list-style-type: none;
+	padding: 0px;
+	margin: 40px auto;
+	overflow: visible;
+	height: 40px;
+}
+#footer ul li {
+    float:left;
+    font-size: 14px;
+    color: #999999;
+}
+#footer ul li a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px 10px 5px 12px;
+    color: #999999;
+}
+#footer ul li span {
+	display: inline-block;
+}
+#footer ul li .menu-secondary-text {
+	padding: 5px 10px 5px 12px;
+	display: inline-block;
+}
+#footer ul li a:hover {
+	color: #C1272D;
+}
+#footer {
+	padding: 40px 0px;
+}
+#colophon {
+	text-align: center;
+	font-size: 12px;
+	width: 100px;
+	padding: 0px;
+	margin: 0px auto;
+	color: #333333;
+}
+#wordpress-logo {
+	display:inline-block;
+	text-indent: -9000px;
+	width: 100px;
+	height: 63px;
+	background-image: url(images/colophon.png);
+}*/
+

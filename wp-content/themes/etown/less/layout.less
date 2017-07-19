@@ -1,0 +1,40 @@
+@sidebar-width: 310px;
+@sidebar-gutter: 20px;
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #1A1A1A;
+	font-family: 'Old Standard TT', serif;
+}
+#wrapper {
+  margin: 0 auto;
+  padding: 0;
+  width: 940px;
+  background-repeat: no-repeat;
+}
+#container {
+    float: left;
+    margin: 0 -@sidebar-width 0 0;
+    width: 100%;
+}
+#content {
+    margin: 0 @sidebar-width 0 0;
+}
+#sidebar {
+    float: right;
+    overflow: hidden;
+    width: @sidebar-width - @sidebar-gutter;
+}
+#primary, #secondary {
+    float: right;
+    overflow: hidden;
+    width: @sidebar-width - @sidebar-gutter;
+}
+#secondary {
+    clear: right;
+}
+#footer {
+    clear: both;
+    width: 100%;
+}

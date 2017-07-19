@@ -1,0 +1,59 @@
+@large-padding: 40px;
+
+.menu-padding () {
+	padding: 5px 10px 5px 12px;
+}
+
+
+#footer {
+	padding: @large-padding 0px;
+	.menu-secondary-container {
+		border-top: 2px solid;
+		border-color: #4D4D4D;
+		text-align: center;
+	}
+	ul {
+		list-style-type: none;
+		display: inline-block;
+        zoom: 1;
+		padding: 0;
+		margin: @large-padding auto;
+		overflow: visible;
+		li {
+			float:left;
+    		font-size: 14px;
+    		color: #999999;
+    		a {
+    			display: inline-block;
+    			text-decoration: none;
+    			.menu-padding();
+    			color: #999999;
+    			&:hover {
+					color: @dark-red;
+				}
+    		}
+    		span {
+    			display: inline-block;
+    		}
+    		.menu-secondary-text {
+				.menu-padding();
+				display: inline-block;
+			}
+		}
+	}
+}
+#colophon {
+	text-align: center;
+	font-size: 12px;
+	width: 100px;
+	padding: 0px;
+	margin: 0px auto;
+	color: #333333;
+}
+#wordpress-logo {
+	display:inline-block;
+	text-indent: -9000px;
+	width: 100px;
+	height: 63px;
+	background-image: url(images/colophon.png);
+}

@@ -1,0 +1,44 @@
+@dark-red: #C1272D;
+
+@import url('info.less');
+@import url('prep/reset.less');
+@import url('prep/rebuild.less');
+@import url('prep/wordpress.less');
+@import url('layout.less');
+@import url('header.less');
+@import url('footer.less');
+@import url('home.less');
+@import url('blog.less');
+@import url('contact.less');
+@import url('about.less');
+@import url('menu.less');
+@import url('specials.less');
+
+.title-container {
+	h1 {
+		font-family: Helvetica, Arial, sans-serif;
+		color: #E6E6E6;
+		font-size: 22px;
+		margin-bottom: 8px;
+	}
+	p {
+		color: #999999;
+		font-size: 14px;
+		padding-bottom: 15px;
+	}
+}
+
+.grey-button {
+	font-family: Helvetica, Arial, sans-serif;
+	padding: 5px 10px;
+	background-color: #65635F;
+	color: #CCCCCC;
+	font-size: 14px;
+	display: inline-block;
+	text-decoration: none;
+	cursor: pointer; 
+	&:hover {
+		background-color: @dark-red;
+		color: #FFFFFF;
+	}
+}
