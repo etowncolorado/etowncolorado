@@ -11,7 +11,7 @@
         "serve": "yarn build && serve -s dist"
     },
     "dependencies": {
-        "@sssserve/framework": "^0.1.0",
+        "@sssserve/framework": "^0.1.4",
         "autodll-webpack-plugin": "^0.3.3",
         "bootstrap-sass": "^3.3.7",
         "contentful": "^5.0.2",
@@ -75,9 +75,5 @@
         "node": ">= 4.0.0",
         "npm": ">= 3.0.0"
     },
-    "browserslist": [
-        "> 1%",
-        "last 2 versions",
-        "not ie <= 8"
-    ]
+    "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"]
 }
