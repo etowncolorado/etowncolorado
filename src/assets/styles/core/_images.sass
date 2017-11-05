@@ -1,0 +1,21 @@
+
+$image-path: '/static/images'
+
+=image ($name, $specs...)
+  @each $spec in $specs
+    +image-spec ($name, $spec...)
+
+@function image-path ($name, $ext)
+  @return url('#{$image-path}/#{$name}.#{$ext}')
+
+=image-spec ($name, $viewport, $width, $height: false, $ext: 'png')
+  +viewport ($viewport)
+    @if $height
+      $name: '#{$name}_#{$viewport}'
+    @else
+      $height: $width
+      $width: $viewport
+
+    width: $width * 1px
+    height: $height * 1px
+    background: image-path($name, $ext)

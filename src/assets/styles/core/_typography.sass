@@ -1,0 +1,23 @@
+
+$typography: ()
+
+@mixin type-spec ($size, $leading, $weight: false, $tracking: false)
+  +font-weight ($weight)
+
+  font-size: $size * 1px
+  line-height: $leading * 1px
+
+  @if $tracking
+    letter-spacing: $tracking
+
+@mixin typography ($family, $specs...)
+  +font-family ($family)
+  @each $spec in $specs
+    +typography-set ($spec...)
+
+@mixin typography-set ($viewport, $size, $leading, $weight: normal, $tracking: false)
+  +viewport ($viewport)
+    +type-spec ($size, $leading, $weight, $tracking)
+
+@mixin typography-add ($name, $viewports)
+  $typography: map-set($typography, $name, $viewports) !global
