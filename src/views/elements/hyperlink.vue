@@ -14,6 +14,7 @@
         return this.fields
       },
 
+
       href() {
         return this.normalize(this.url)
       },
