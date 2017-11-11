@@ -3,7 +3,6 @@ var utils = require('./utils')
 var webpack = require('webpack')
 var config = require('../config')
 var merge = require('webpack-merge')
-var AutoDllPlugin = require('autodll-webpack-plugin')
 var baseWebpackConfig = require('./webpack.base.conf')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -67,13 +66,6 @@ var webpackConfig = merge(baseWebpackConfig, {
     }),
     // keep module.id stable when vender modules does not change
     new webpack.HashedModuleIdsPlugin(),
-    // new AutoDllPlugin({
-    //   inject: true, // will inject the DLL bundles to index.html
-    //   filename: '[name].js',
-    //   entry: {
-    //     vendor: ['vue']
-    //   }
-    // }),
     // split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',

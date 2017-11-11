@@ -47,4 +47,5 @@
     border: 2px solid swatch(poppy)
     outline: none
     background: swatch(black)
+    border-radius: 0
 </style>
