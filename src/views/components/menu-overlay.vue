@@ -69,7 +69,7 @@
       pointer-events: none
 
   .social
-    height: 100px
+    height: 20px
     // background: green
 
   .burger
