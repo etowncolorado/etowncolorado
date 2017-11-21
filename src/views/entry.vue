@@ -1,6 +1,8 @@
 
 <template lang="pug">
-  router-view
+  div
+    router-view
+    layout(:visible="$route.query.layout", :image="$route.params.page")
 </template>
 
 <style lang="sass">

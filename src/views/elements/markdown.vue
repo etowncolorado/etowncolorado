@@ -1,11 +1,11 @@
 
 <template lang="pug">
-  div(:class="$style.module", v-html="$app('markdown', fields.large)")
+  div(:class="$style.module", v-html="$app('markdown', text)")
 </template>
 
 <script>
   export default {
-    props: ['fields']
+    props: ['text']
   }
 </script>
 

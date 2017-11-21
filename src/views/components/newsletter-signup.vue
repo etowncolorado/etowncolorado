@@ -12,7 +12,7 @@
     props: ['fields'],
 
     mounted() {
-      console.log('this.fields.label', this.fields)
+      // console.log('this.fields.label', this.fields)
     }
   }
 </script>
@@ -21,31 +21,40 @@
   @import '~styles/core'
 
   .label
-    +typography (sans, large 12 32 bold 1px)
+    +typography (sans, small 15 26 bold 1px, large 12 32 bold 0.75px)
+    +prop (text-align, small center, large left)
     color: swatch(sand)
+    display: block
 
   .group
-    +prop (margin-top, large 2px)
+    +prop (margin-top, small 18px, large 4px)
+    +prop (margin-left, small 20px, large 0)
+    +prop (margin-right, small 20px, large 0)
+    +prop (flex-direction, small column, large row)
     display: flex
 
   .input
     +typography (sans, large 14 32 light 1.4px)
-    +prop (height, large 30px)
-    +prop (padding, large 0 10px)
+    +prop (height, small 48px, large 30px)
+    +prop (padding, small 0 10px)
+    +prop (text-align, small center, large left)
     flex: 1 0 auto
     border: none
     outline: none
+    border-radius: 0
 
   .button
-    +typography (sans, large 12 2 bold 0.7px)
+    +typography (sans, small 12 2 bold 0.7px)
+    +prop (margin-top, small 15px, large 0)
     +prop (margin-left, large 10px)
     +prop (padding, large 0 20px)
-    +prop (height, large 30px)
-    display: flex
+    +prop (height, small 50px, large 30px)
     color: swatch(sand)
     cursor: pointer
-    border: 2px solid swatch(poppy)
+    border: 1px solid swatch(poppy)
+    display: flex
     outline: none
     background: swatch(black)
     border-radius: 0
+    justify-content: center
 </style>

@@ -29,7 +29,7 @@ module.exports = merge(baseWebpackConfig, {
     new webpack.NoEmitOnErrorsPlugin(),
     // https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-      title: 'Custom template',
+      title: 'etown',
       filename: 'index.html',
       template: 'src/views/index.html',
       inject: true

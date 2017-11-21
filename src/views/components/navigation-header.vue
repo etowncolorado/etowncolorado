@@ -1,7 +1,7 @@
 
 <template lang="pug">
   nav(:class="$style.module")
-    container(:class="$style.container", flex)
+    container(:class="$style.container", row)
       module(:class="$style.left")
         hyperlink(:class="$style.logo", :fields="fields.logo.fields")
       module(:class="$style.right", fill)
@@ -19,10 +19,11 @@
   @import '~styles/core'
 
   .module
-    +prop (padding-top, large 54px)
+    +prop (padding-top, small 30px, large 48px)
+    +prop (padding-bottom, small 0, large 4px)
 
   .logo img
-    +prop (height, large 54px)
+    +prop (height, small 46px, large 54px)
     +prop (margin-left, large -30px)
 
   .item
@@ -30,7 +31,7 @@
     align-items: center
 
   .link
-    +typography (sans, large 13 32 bold 2.5px)
+    +typography (sans, large 13 32 bold 1.5px)
     position: relative
     &:global(.router-link-active)
       &:after
@@ -41,4 +42,10 @@
         content: ' '
         position: absolute
         background: swatch(poppy)
+
+  .left
+    +prop (text-align, small center, medium left)
+
+  .right
+    +prop (display, small none !important, large flex !important)
 </style>

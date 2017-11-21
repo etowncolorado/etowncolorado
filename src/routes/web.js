@@ -1,9 +1,7 @@
-// const view = require('@sssservices/foundation/helpers/view')
-
 function route(path, view) {
   return {
     path: path,
-    component: view // view(name)
+    component: view
   }
 }
 
@@ -15,5 +13,7 @@ function redirect(from, to) {
 }
 
 module.exports = [
-  route('/:page/(.*)?', () => import('../views/pages/contentful.vue'))
+  redirect('/', '/about'),
+  route('/api', () => import('../views/pages/api.vue')),
+  route('/:page?/(.*)?', () => import('../views/pages/contentful.vue'))
 ]

@@ -7,7 +7,7 @@ class MarkdownProvider extends Provider {
       return new Showdown.Converter()
     })
 
-    this.app.singleton('markdown', (app, text) => {
+    this.app.bind('markdown', (app, text) => {
       return app.make('markdown.converter').makeHtml(text)
     })
   }

@@ -39,8 +39,10 @@
           .where('slug', slug)
           .first(result => {
             if (!result) {
-              this.$router.replace('/')
+              return this.fetch(404)
             }
+
+            document.title = `e|town - ${result.fields.title}`
 
             this.fields = result.fields
           })
