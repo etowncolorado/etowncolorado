@@ -51,9 +51,25 @@
   @import '~styles/core'
 
   .module
-    +prop (padding-top, large 60px)
-    +prop (padding-bottom, large 68px)
+    +prop (padding-top, small 40px, large 60px)
+    +prop (padding-bottom, small 44px, large 68px)
 
   .post:nth-child(odd)
     +prop (padding-left, large 40px)
+
+
+  .post + .post
+    +viewport (small, large)
+      position: relative
+      padding-top: 60px
+      &:before
+        top: 30px
+        left: 50%
+        width: 46px
+        height: 2px
+        content: ' '
+        position: absolute
+        transform: translateX(-50%)
+        background: swatch(poppy)
+
 </style>

@@ -29,8 +29,8 @@
   @import '~styles/core'
 
   .module
-    +prop (padding-top, large 60px)
-    +prop (padding-bottom, large 78px)
+    +prop (padding-top, small 60px)
+    +prop (padding-bottom, small 40px, large 78px)
 
   .details
     margin-top: -30px
@@ -39,16 +39,19 @@
     position: relative
     margin-top: 30px
 
-
   .detail:nth-child(odd)
-    padding-left: 40px
+    +prop (padding-left, large 40px)
 
   .map
-    margin-top: 70px
-    width: 100%
+    +prop (padding-top, small 66%, large 50%)
+    +prop (margin-top, small 30px, large 70px)
+    +prop (width, large 100%)
+    +viewport (small, large)
+      margin-left: -20px
+      margin-right: -20px
+    // width: 100%
     position: relative
     background: swatch(sand)
-    padding-top: 50%
     iframe
       top: 0
       width: 100%

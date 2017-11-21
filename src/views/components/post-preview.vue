@@ -76,23 +76,28 @@
     +prop (padding, large 4px 0 10px)
 
   .date
-    +typography(sans, large 12 26 bold 0.7px)
+    +typography (sans, small 12 26 bold 0.7px, large 12 26 bold 0.7px)
+    +prop (text-align, small center, large left)
     color: swatch(poppy)
 
   .title
-    +typography(serif, large 25 30 light)
+    +typography (serif, small 25 30 light, large 25 30 light)
+    +prop (text-align, small center, large left)
     +prop (max-width, large 90%)
+    +prop (margin-top, small 4px, large 0)
     color: swatch(grey)
     
   .description
-    +typography(sans, large 12 20 thin 0.8px)
-    +prop (margin-top, large 14px)
+    +typography (sans, small 12 21 thin 0.8px, large 12 20 thin 0.8px)
+    +prop (text-align, small center, large left)
+    +prop (margin-top, small 13px, large 14px)
     +prop (margin-left, large 2px)
     +prop (margin-bottom, large 34px)
     color: swatch(grey)
 
   .button
+    +prop (margin-top, small 30px, large 0)
     +prop (margin-left, large 2px)
-    display: inline-block
+    +prop (display, large inline-block)
 
 </style>

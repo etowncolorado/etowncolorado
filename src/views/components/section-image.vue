@@ -81,6 +81,7 @@
 
   .text
     +prop (margin-top, small 40px, large initial)
+    +prop (margin-left, large 40px)
     +prop (padding-left, large 40px)
     align-items: flex-start
     flex-direction: column
@@ -126,8 +127,8 @@
     +prop (margin-bottom, small 44px, large 8px)
 
   .image
-    +prop (margin-left, small -20px !important, large initial)
-    +prop (margin-right, small -20px !important, large initial)
+    +prop (margin-left, small -20px !important, large initial !important)
+    +prop (margin-right, small -20px !important, large initial !important)
     position: relative
     +viewport (small, medium)
       img

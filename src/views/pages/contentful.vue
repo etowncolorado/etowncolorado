@@ -31,6 +31,7 @@
 
     methods: {
       fetch(slug) {
+        this.$screen.menu = false
         this.fields = null
 
         this.$app('contentful')

@@ -1,11 +1,11 @@
 
 <template lang="pug">
-  router-link(v-if="linked", :class="[$style.module, visual && $style.image]", :to="href")
+  router-link(v-if="linked", :class="[$style.module, visual && $style.image]", :to="href", @click="$emit('navigate')")
     slot(v-if="!visual && !iconic") {{ label }}
     images(v-if="visual", :fields="fields.image.fields")
     icon(v-if="iconic", :fields="fields.icon.fields")
 
-  a(v-else, :class="[$style.module, visual && $style.image]", :href="href")
+  a(v-else, :class="[$style.module, visual && $style.image]", :href="href", @click="$emit('navigate')")
     slot(v-if="!visual && !iconic") {{ label }}
     images(v-if="visual", :fields="fields.image.fields")
     icon(v-if="iconic", :fields="fields.icon.fields")

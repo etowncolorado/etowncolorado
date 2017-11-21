@@ -17,11 +17,15 @@
   
   .module
     +typography (sans, small 16 2 bold 1px, large 12 2 bold 0.7px)
-    +prop (width, small 85%, large auto)
-    +prop (height, small 50px, large 40px)
-    +prop (padding, small 0 30px)
-    +prop (margin-left, small auto, large initial)
-    +prop (margin-right, small auto, large initial)
+    +viewport (large)
+      width: auto
+      height: 40px
+    +viewport (small, large)
+      width: 85%
+      height: 50px
+      margin-left: auto
+      margin-right: auto
+    padding: 0 30px
     border: 2px solid swatch(poppy)
     display: flex
     align-items: center;

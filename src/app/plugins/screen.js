@@ -2,6 +2,7 @@ module.exports = {
   install(Vue) {
     Vue.prototype.$screen = new Vue({
       data: {
+        menu: false,
         viewport: null,
         viewports: {
           small: 0,

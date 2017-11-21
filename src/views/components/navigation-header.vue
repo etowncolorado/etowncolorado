@@ -7,10 +7,15 @@
       module(:class="$style.right", fill)
         div(:class="$style.item", v-for="entry in fields.links")
           hyperlink(:class="$style.link", :fields="entry.fields")
+    menu-overlay(:fields="fields")
 </template>
 
 <script>
+  import MenuOverlay from './menu-overlay'
+
   export default {
+    components: { MenuOverlay },
+
     props: ['fields']
   }
 </script>
@@ -44,8 +49,9 @@
         background: swatch(poppy)
 
   .left
-    +prop (text-align, small center, medium left)
+    +prop (text-align, small center, large left)
 
   .right
     +prop (display, small none !important, large flex !important)
+
 </style>

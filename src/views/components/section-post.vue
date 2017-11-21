@@ -6,7 +6,8 @@
         div(:class="$style.headline")
           p(:class="$style.date", v-if="fields.date") {{ date(fields.date) }}
           h1(:class="$style.title", v-if="fields.title") {{ fields.title }}
-        asset(:class="$style.image", v-if="!plain && fields.image", :fields="fields.image.fields")
+        div(:class="$style.image", v-if="!plain && fields.image")
+          asset(:fields="fields.image.fields")
         markdown(:class="$style.text", :text="fields.text")
 </template>
 
@@ -44,16 +45,18 @@
   @import '~styles/core'
 
   .module
-    +prop (padding-top, large 68px)
-    +prop (padding-bottom, large 88px)
+    +prop (padding-top, small 40px, large 68px)
+    +prop (padding-bottom, small 44px, large 88px)
 
   .post
-    margin-left: 40px
-    max-width: 65%
+    +prop (margin-left, large 40px)
+    +prop (max-width, large 65%)
+    // max-width: 65%
 
   .headline
     position: relative
     &:after
+      +prop (display, small none, large block)
       top: 4px
       left: -40px
       width: 1px
@@ -63,22 +66,28 @@
       background: swatch(poppy)
 
   .date
-    +typography(sans, large 12 24 bold 0.7px)
+    +typography(sans, small 12 24 bold 0.7px)
+    +prop (text-align, small center, large left)
     color: swatch(poppy)
 
   .title
-    +typography(serif, large 34 44 light)
+    +typography(serif, small 34 44 light)
+    +prop (text-align, small center, large left)
     +prop (max-width, large 90%)
     color: swatch(grey)
 
   .image
-    +prop (padding, large 4px 0 10px)
-    +prop (margin-top, large 30px)
-    width: 100%
-    height: auto
+    +prop (padding, small 4px 0 10px)
+    +prop (margin-top, small 15px, large 30px)
+    +viewport (small, large)
+      margin-left: -20px
+      margin-right: -20px
+    img
+      width: 100%
+      height: auto
     
   .text
-    +typography(sans, large 12 21 thin 0.5px)
-    +prop (margin-top, large 30px)
+    +typography(sans, small 14 23 thin 1px, large 12 21 thin 0.5px)
+    +prop (margin-top, small 30px)
 
 </style>
