@@ -1,8 +1,0 @@
-
-@function map-set ($map, $key, $value)
-  @return map-merge($map, ($key: $value))
-
-@function map-key-or-value ($map, $key)
-  @if map-has-key($map, $key)
-    @return map-get($map, $key)
-  @return $key
